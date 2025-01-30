@@ -1,0 +1,2 @@
+const unsubscribe = onAuthStateChanged(auth, (user) => { if (user) { // User is signed in, see docs for a list of available properties https://firebase.google.com/docs/reference/js/firebase.User // ... } else { // User is signed out // ... } });
+// unsubscribe is crucial and often overlooked.  Forgetting to call unsubscribe() can lead to memory leaks and unexpected behavior.  Make sure it's called when the component unmounts or is no longer needed.
